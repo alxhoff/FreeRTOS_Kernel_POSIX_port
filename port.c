@@ -370,7 +370,7 @@ void vPortClearInterruptMask(portBASE_TYPE xMask)
 void prvSetupTimerInterrupt(void)
 {
     struct itimerval itimer, oitimer;
-    portTickType xMicroSeconds = portTICK_RATE_MICROSECONDS;
+    portTickType xMicroSeconds = portTICK_PERIOD_MICROSECONDS;
 
     /* Initialise the structure with the current timer information. */
     if (0 == getitimer(TIMER_TYPE, &itimer)) {
